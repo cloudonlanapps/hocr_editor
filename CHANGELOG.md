@@ -1,3 +1,5 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Initial release
+* Supports edit/delete words, view text and image overlayed
+
