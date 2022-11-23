@@ -1,0 +1,28 @@
+name: hocr_editor
+description:
+  A flutter fullscreen widget, that displays hocr (xml) file along with 
+  original image and allows to edit the text in it.
+version: 0.0.1
+repository: https://github.com/cloudonlanapps/hocr_editor
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.0.2  
+  material_design_icons_flutter: ^5.0.6996
+  font_awesome_flutter: ^10.2.1
+  collection: ^1.16.0
+  adaptive_dialog: ^1.8.0+1
+  image: ^3.2.2
+  dart_hocr: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
