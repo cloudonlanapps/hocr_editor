@@ -37,6 +37,8 @@ class _HOCRDemoState extends State<HOCRDemo> {
     return await OCRImage.fromOCRData(
       image: bytes.buffer.asUint8List(),
       lang1: 'hi',
+      width: 3024,
+      height: 4032,
       xmlString: await rootBundle.loadString('assets/sample1.hocr'),
     );
   }
@@ -46,9 +48,6 @@ class _HOCRDemoState extends State<HOCRDemo> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          title: const Text("HOCR Editor Demo"),
-        ),
         body: FutureBuilder(
           future: loadAssets(),
           builder: (context, snapshot) {
