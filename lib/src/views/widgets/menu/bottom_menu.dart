@@ -70,16 +70,9 @@ class BottomMenuState extends ConsumerState<_BottomMenu> {
                   scale: 0.8),
               if (widget.ocrViewController.edit)
                 CLCustomMenuItem(
-                    label: hasId
-                        ? (widget.doc.isChanged ? 'Update' : 'Saved')
-                        : 'Save',
-                    icon: hasId
-                        ? (widget.doc.isChanged
-                            ? FontAwesomeIcons.circlePlus
-                            : FontAwesomeIcons.check)
-                        : FontAwesomeIcons.circlePlus,
-                    onTap:
-                        hasId ? (widget.doc.isChanged ? onSave : null) : onSave,
+                    label: 'Save',
+                    icon: FontAwesomeIcons.floppyDisk,
+                    onTap: onSave,
                     scale: 0.8),
               CLCustomMenuItem(
                 label: hasId ? "Close" : 'Discard Image',
