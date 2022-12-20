@@ -75,7 +75,8 @@ class _HOCRDemoState extends State<HOCRDemo> {
                       onDiscardImage: () {},
                       onCopyToClipboard: (text) {},
                       onDictLookup: (String text, {required String lang}) {},
-                      onSaveImage: (img) async {
+                      onSaveImage: (OCRImage img,
+                          {bool asStory = false}) async {
                         setState(() {
                           isSaving = true;
                         });

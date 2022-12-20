@@ -263,15 +263,15 @@ class _MenuLayoutDelegate extends MultiChildLayoutDelegate {
   bool shouldRelayout(MultiChildLayoutDelegate oldDelegate) => false;
 }
 
-class CLMenuItem {
+class CLMenuItemOld {
   String title;
   IconData icon;
   void Function()? onTap;
-  CLMenuItem(this.title, this.icon, {this.onTap});
+  CLMenuItemOld(this.title, this.icon, {this.onTap});
 }
 
 class CLPopupMenuItem extends StatelessWidget {
-  final CLMenuItem menuItem;
+  final CLMenuItemOld menuItem;
   const CLPopupMenuItem({
     super.key,
     required this.menuItem,

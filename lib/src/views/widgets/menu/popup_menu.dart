@@ -25,13 +25,13 @@ class PopupMenu extends ConsumerWidget {
     if (!control.isMenuShowing) return Container();
     String? lang = (ocrImage?.lang1)!;
     final menuItems = [
-      CLMenuItem('Copy', Icons.content_copy,
+      CLMenuItemOld('Copy', Icons.content_copy,
           onTap: (control.node!.disabled ||
                   ocrViewController.onCopyToClipboard == null)
               ? null
               : () =>
                   ocrViewController.onCopyToClipboard!(control.node!.word!)),
-      CLMenuItem('Dictionary', Icons.translate,
+      CLMenuItemOld('Dictionary', Icons.translate,
           onTap:
               (control.node!.disabled || ocrViewController.onDictLookup == null)
                   ? null
@@ -42,20 +42,20 @@ class PopupMenu extends ConsumerWidget {
                     }),
       if (ocrViewController.edit) ...[
         if (control.node!.disabled)
-          CLMenuItem("Undo", FontAwesomeIcons.arrowRotateLeft,
+          CLMenuItemOld("Undo", FontAwesomeIcons.arrowRotateLeft,
               onTap: () => onDelete(ref))
         else
-          CLMenuItem('Delete', FontAwesomeIcons.textSlash,
+          CLMenuItemOld('Delete', FontAwesomeIcons.textSlash,
               onTap: () => onDelete(ref)),
         if (!control.node!.disabled)
-          CLMenuItem('Edit', Icons.edit,
+          CLMenuItemOld('Edit', Icons.edit,
               onTap: control.node!.disabled
                   ? null
                   : () =>
                       onEdit?.call(control.node!.id, control.node!.word ?? "")),
       ],
       if (control.node!.replacedText != null)
-        CLMenuItem('Restore', Icons.restore, onTap: () => restoreText(ref)),
+        CLMenuItemOld('Restore', Icons.restore, onTap: () => restoreText(ref)),
     ];
     if (!control.isMenuShowing) {
       return Container();
