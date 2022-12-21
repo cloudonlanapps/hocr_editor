@@ -77,7 +77,7 @@ class DraggableMenuState extends ConsumerState<_DraggableMenu> {
         _maxOffset = Offset(
             parentSize.width - size.width, parentSize.height - size.height);
       });
-    } catch (e) {
+    } on Exception {
       //print('catch: $e');
 
     }
