@@ -4,8 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../models/menu_control.dart';
 import '../../../providers/menu_control.dart';
 
-// ignore: todo
-// TODO: Remove content type
+// TODO(anandas): Remove content type
 class ContentTypeMenu extends ConsumerWidget {
   const ContentTypeMenu({Key? key}) : super(key: key);
 
